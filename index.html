@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style\style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- social media -->
+            <nav>
+                <a href="#profile-section">ABOUT ME</a>
+                <a href="#skills">SKILL</a>
+                <a href="#background">BACKGROUND</a>
+                <a href="#project">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+
+            <!-- main title -->
+            <h1 id="title">Portfolio</h1> 
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-section" id="profile-section">
+            <div class="profile">
+                <!-- profile photo -->
+                <img src="assets\me - circle.svg" alt="">
+
+                <!-- name -->
+                <h1 id="my-name">Tasya Angellica Sugiharto</h1>
+                <div>
+                    <nav class="social-media">
+                        <a href="https://instagram.com/tasyanglc" target="_blank">
+                            <img id="social-media-logo" src="assets\instagram (3).png" alt="Instagram">
+                        </a>
+                        <a href="https://www.linkedin.com/in/tasyanglc/" target="_blank">
+                            <img id="social-media-logo" src="assets\linkedin (2).png" alt="Linkedin">
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="about-me">
+                <div class="container-text">
+                    <h2 id="about-me-title">About Me</h2>
+                    <!-- about me -->
+                    <p>
+                        Hi! I'm an undergraduate student at UPN “Veteran” Jakarta, majoring in Information Systems.  
+                        I'm passionate about web development and love building digital solutions that are both functional 
+                        and visually appealing.
+                        <br><br>
+                        I'm currently learning full web development. From designing intuitive, user-friendly interfaces to 
+                        understanding how the backend supports and connects everything behind the scenes.  
+                        This helps me build complete, well-structured websites and applications.
+                        <br><br>
+                        This portfolio showcases my learning journey, personal projects, and the skills I've been 
+                        developing along the way. Feel free to explore, and let's connect and grow together!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <section class="skills" id="skills">
+            <!-- skills list -->
+            <h2>SKILLS</h2>
+            <ul class="skills-list">
+                <li>
+                    <img src="assets\1 grey.svg" alt="">
+                    <h4>HTML, CSS, Javascript</h4>
+                </li>
+                <li style="border-left: 2px solid #6d6d6d; border-right: 2px solid #6d6d6d;">
+                    <img src="assets\3 grey.svg" alt="">
+                    <h4>Database: MySQL</h4>
+                </li>
+                <li>
+                    <img src="assets\2 grey.svg" alt="">
+                    <h4>UI Design: Figma</h4>
+                </li>
+            </ul>
+        </section>
+
+        <hr />
+
+        <section id="background">
+            <h2 id="background-title">BACKGROUND</h2>
+            <div class="table-layout">
+                <!-- tabel pendidikan -->
+                <section class="education-section">
+                    <h2>Education</h2>
+                    <table class="education-table">
+                        <tr style="background-color: black; color: white;">
+                            <th>Institution</th>
+                            <th>Major</th>
+                            <th>Period</th>
+                        </tr>
+                        <tr style="background-color: #dfdfdf;">
+                            <td>UPN "Veteran" Jakarta</td>
+                            <td>2024 - present</td>
+                            <td>Information System</td>
+                        </tr>
+                        <tr style="background-color: #f5f5f5;">
+                            <td>SMAN 2 Bogor</td>
+                            <td>Science</td>
+                            <td>2020 - 2023</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- tabel pengalaman organisasi -->
+                <section class="organization-section">
+                    <h2>Organization</h2>
+                    <table class="organization-table">
+                        <!-- Heading table -->
+                        <tr style="background-color: black; color: white;">
+                            <th>Organization</th>
+                            <th>Position</th>
+                            <th>Period</th>
+                        </tr>
+                        <!-- Data table -->
+                        <tr style="background-color: #dfdfdf;">
+                            <td>KSM Multimedia</td>
+                            <td>Member</td>
+                            <td>2025 - present</td>
+                        </tr>
+                        <tr style="background-color: #f5f5f5;">
+                            <td>Science Club</td>
+                            <td>Public Relation Officer</td>
+                            <td>2022 - 2023</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </section>
+
+        <hr />
+
+        <section class="project" id="project">
+            <h2>PROJECTS</h2>
+            <div class="projects-grid">
+                <div class="card">
+                    <img class="card-image" src="assets/1 p.svg" alt="">
+                    <a href="https://revou-fundamental-course.github.io/17-mar-25-tasyanglc/">
+                        <p style="font-weight: bold; color: black; font-size: 20px;">Katik - Kalkulator Matematik</p>
+                    </a>
+                    <p>A simple and interactive calculator website built to perform basic mathematical operations</p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="assets/2 p.svg" alt="">
+                    <a href="https://revou-fundamental-course.github.io/21-apr-25-tasyanglc/">
+                        <p style="font-weight: bold; color: black; font-size: 20px;">Temperature Conversion Calculator</p>
+                    </a>
+                    <p>A simple calculator website for converting temperatures between Celsius and Fahrenheit</p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="assets/3 p.svg" alt="">
+                    <a href="https://revou-fundamental-course.github.io/05-may-25-tasyanglc/">
+                        <p style="font-weight: bold; color: black; font-size: 20px;">Tastetoria</p>
+                    </a>
+                    <p>A simple company profile website</p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="assets/4 p.svg" alt="">
+                    <a href="#">
+                        <p style="font-weight: bold; color: black; font-size: 20px;">Tastetoria</p>
+                    </a>
+                    <p>A simple mockup and color theory challenge from a college assignment</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="form-section" id="contact">
+            <h2>CONTACT ME</h2>
+            <div class="form">
+                <form action="">
+                    <label for="">Nama :</label>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <label for="">Alamat Email :</label>
+                    <input type="email" id="email">
+                    <br>
+                    <label for="pesan">Pesan :</label>
+                    <textarea name="pesan" id="pesan"></textarea>
+                    <br>
+                    <input type="submit" value="SEND">
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 | tasyanglc</p>
+        </div>
+    </footer>
+</body>
+</html>
