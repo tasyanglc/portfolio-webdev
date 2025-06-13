@@ -6,6 +6,11 @@ body {
 
 header {
     background-color: black;
+    position: fixed;
+    max-width: 5000px;
+    width: 100%;
+    top: 0px;
+    z-index: 9999;
 }
 
 .header-container {
@@ -63,8 +68,8 @@ a:hover {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 150px;
+    padding-bottom: 100px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -116,7 +121,8 @@ a:hover {
     margin: 0px;
     margin-top: 20px;
     padding: 0px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
 }
 
@@ -172,9 +178,10 @@ a:hover {
 }
 
 #background {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 100px;
 }
 
 #background-title {
@@ -238,8 +245,8 @@ a:hover {
 
 .project h2 {
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 150px;
+    padding-bottom: 10px;
     color: black;
     letter-spacing: 5px;
     font-size: 32px;
@@ -248,18 +255,19 @@ a:hover {
 }
 
 .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 16px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    justify-items: center; 
 }
 
 .card {
-    flex: 1;
+    width: 100%;
+    max-width: 300px; 
     box-sizing: border-box;
     border: 2px solid #3d3d3d;
-    padding: 16px;
+    padding: 15px;
     border-radius: 12px;
     text-align: center;
     background-color: white;
@@ -276,6 +284,13 @@ a:hover {
     height: auto;
     max-height: 200px;
     object-fit: contain;
+}
+
+.card a {
+  display: inline-block;
+  width: fit-content;
+  padding: 0px;
+  line-height: 1.2;
 }
 
 .form-section {
@@ -314,8 +329,8 @@ a:hover {
 .form input[type="email"],
 .form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 2px;
+    margin-bottom: 0px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
@@ -354,4 +369,154 @@ footer {
 
 hr {
     margin-top: 30px;
+}
+
+/* 
+    Query Media :
+    Ada dua query media di sini. untuk width kurang dari 860 dan kurang dari 500.
+    Untuk width di atas itu tidak saya buat lagi query medianya, karena sudah cukup responsif.
+    (Kecuali untuk masalah typography)
+*/
+
+/*  Query media 1
+    media buat <= 860 (terutama mobile) */
+@media screen and (max-width: 860px) {
+    header .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #title {
+        order: -1; 
+    }
+
+    nav {
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    nav a {
+        display: block;
+        margin: 0px 5px;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile img {
+        width: 300px;
+    }
+
+    .social-media {
+        margin: 5px 0;
+    }
+
+    .about-me {
+        order: 2;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-list li {
+        border: none !important;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    .table-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-section,
+    .organization-section {
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .form-section {
+        padding: 20px 50px;
+        text-align: center;
+    }
+
+    .form-section h2 {
+        font-size: 24px;
+        margin-top: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .form form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form label {
+        font-size: 14px;
+        margin-top: 12px;
+        margin-bottom: 6px;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form textarea {
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form textarea {
+        height: 100px;
+        resize: vertical;
+    }
+
+    .form input[type="submit"] {
+        margin-top: 20px;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 6px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .form input[type="submit"]:hover {
+        background-color: #333;
+        color: lightgray;
+    }
+}
+
+/*  Query media 2
+    penyesuaian lagi buat width < 502 */
+@media screen and (max-width: 502px) {
+    .nav-skill, .nav-background {
+        display: none;
+    }
 }
